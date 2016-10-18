@@ -1,0 +1,14 @@
+.DS_Store
+build/
+node_modules/
+design/
+*.zip
+*.rar
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+css/*.css
+Thumbs.db

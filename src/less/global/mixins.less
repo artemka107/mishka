@@ -1,0 +1,30 @@
+// распорка для флотов и для выпадающих верхних маргинов
+.clearfix() {
+  &::after {
+    display: table;
+    clear: both;
+
+    content: "";
+  }
+
+  &::before {
+    display: table;
+
+    content: "";
+  }
+}
+
+// враппер с фиксированной шириной
+.container() {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet {
+    width: 668px;
+  }
+
+  @media @desktop {
+    width: 1050px;
+  }
+}
