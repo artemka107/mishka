@@ -1,0 +1,54 @@
+.burger {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 20px;
+  height: 14px;
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  border: 0;
+  outline-color: transparent;
+
+  &__layer {
+    position: absolute;
+    top: 6px;
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: #000;
+    transition: background-color 0.3s ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #000;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+}
+
+  // правило для бургера в состоянии креста
+.burger--closed .burger__layer {
+  background-color: transparent;
+
+  &::before {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-6px) rotate(-225deg);
+  }
+}

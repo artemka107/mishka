@@ -94,7 +94,7 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "build/img/symbols.svg" : ["img/icons/*.svg"]
+          "build/img/symbols.svg" : ["build/img/icons/*.svg"]
         }
       }
     },
@@ -146,7 +146,15 @@ module.exports = function(grunt) {
           ext: "-min.js"
         }]
       }
-    }
+    },
+
+    "gh-pages": {
+      options: {
+        // какую папку считать результатом работы
+        base: "build"
+      },
+      src: "**/*"
+    },
   });
 
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);

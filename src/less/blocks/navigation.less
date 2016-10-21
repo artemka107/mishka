@@ -1,0 +1,31 @@
+.navigation__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navigation {
+  &__item {
+    display: block;
+    background: #fff;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    color: @text-color--bold;
+
+    font-size: @font-size + 2;
+    font-weight: 700;
+    line-height: @line-height;
+
+    &:hover {
+      color: @color--hvr;
+    }
+
+    &:active {
+      color: @color--dwn;
+    }
+  }
+}

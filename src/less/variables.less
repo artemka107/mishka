@@ -3,3 +3,69 @@
 @mobile-only: ~"(max-width: 767px)";
 @tablet: ~"(min-width: 768px)";
 @desktop: ~"(min-width: 1200px)";
+
+// переменные шрифтов
+
+@font-family: "Open Sans", "Arial", sans-serif;
+
+@line-height: 24px;
+@line-height--h1: 30px;
+@line-height--h2: @line-height--h1;
+@line-height--h3: @line-height--h1;
+
+@font-size: 15px;
+@font-size--h1: 27px;
+@font-size--h2: 25px;
+@font-size--h3: 18px;
+
+// переменные цветов
+
+@main-color: #63d1bb;
+@main-color--darken: #56c3b2;
+
+@color-error: #f0b1b1;
+
+@text-color: #444;
+@text-color--bold: #000;
+
+@color--hvr: rgba(0, 0, 0, 0.6);
+@color--dwn: rgba(0, 0, 0, 0.3);
+
+@icon-color: #000;
+@icon-color--hvr: @main-color;
+@icon-color--dwn: fade(@main-color, 30%);
+
+// переменные кнопки
+
+@btn-color: @text-color;
+@btn-color--hvr: #fff;
+@btn-color--dwn: fade(@btn-color--hvr, 20%);
+
+@btn-bg: #fff;
+@btn-bg--hvr: @text-color;
+@btn-bg--dwn: @text-color;
+
+@btn-bd: @text-color;
+@btn-bd--hvr: transparent;
+@btn-bd--dwn: transparent;
+
+// переменные элементов форм
+
+@input-color: @text-color;
+
+@input-bd: #000;
+@input-bd--hvr: @main-color;
+@input-bd--dwn: @main-color;
+
+@indicator-bg-r: @main-color;
+@indicator-bg-r--hvr: @main-color;
+@indicator-bg-r-dnw: @main-color;
+
+@indicator-bg-cb: #000;
+@indicator-bg-cb--hvr: #000;
+@indicator-bg-cb--dnw: #000;
+
+@input-icon-color: fade(@icon-color, 20%);
+@input-icon-color--hvr: @main-color;
+@input-icon-color--dwn: @main-color;
+@input-icon-color--error: @input-icon-color;

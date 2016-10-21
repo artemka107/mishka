@@ -1,0 +1,82 @@
+.top-menu {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+
+  @media @tablet {
+    height: 90px;
+  }
+
+  &__btn {
+    margin-right: 7%;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.top-menu__wrapper {
+  position: relative;
+
+  display: flex;
+
+  height: 80px;
+
+  // .container();
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.top-menu__nav {
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &--opened {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &--closed {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &--no-js {
+    opacity: 1;
+  }
+
+  &-item {
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid  #ececec;
+    text-align: center;
+  }
+
+  &-link {
+    position: relative;
+
+    &:hover svg {
+      fill: @icon-color--hvr;
+    }
+
+    &:active svg {
+      fill: @icon-color--dwn;
+    }
+  }
+
+  &-link svg {
+    position: absolute;
+    left: -45px;
+    top: 3px;
+    fill: fade(@icon-color, 20%);
+  }
+}
