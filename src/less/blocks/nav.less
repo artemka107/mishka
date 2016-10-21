@@ -1,11 +1,11 @@
-.navigation {
+.nav {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.navigation {
+.nav {
   &__item {
     display: block;
     background: #fff;
@@ -21,7 +21,9 @@
     line-height: @line-height;
 
     &:hover {
-      color: @color--hvr;
+      @media @desktop {
+        color: @color--hvr;
+      }
     }
 
     &:active {
