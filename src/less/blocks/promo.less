@@ -1,6 +1,58 @@
 .promo {
-  background: #f9f9f9 url("../img/hero-mobile.jpg") no-repeat center top;
+  position: relative;
+  background: #f9f9f9 url("../img/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
   background-size: 320px 372px;
+
+  @media (min-width: 260px) and (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background: #f9f9f9 url("../img/hero-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 320px 372px;
+  }
+
+  @media @tablet {
+    background-image: url("../img/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1150px 756px;
+  }
+
+  &::before {
+    @media @tablet {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 23px;
+      background: url("../img/zigzag-fill-desktop.png") repeat-x;
+      background-size: 1150px 34px;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 23px;
+        background: url("../img/zigzag-fill-desktop@2x.png") repeat-x;
+        background-size: 1150px 34px;
+      }
+    }
+  }
+
+  @media @tablet and (min-resolution: 144dpi), @tablet and (min-resolution: 1.5dppx) {
+    background: #f9f9f9 url("../img/hero-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 768px 746px;
+  }
 }
 
 .promo__wrapper {
@@ -8,19 +60,34 @@
 }
 
 .promo__title {
+  width: 81%;
   margin: 0;
+  margin-right: auto;
   margin-bottom: 125px;
+  margin-left: auto;
   padding-top: 75px;
 
   text-align: center;
 
   font-size: @font-size--h1;
+
+  @media @tablet {
+    margin-bottom: 385px;
+    padding-top: 150px;
+
+    font-size: @font-size--h1 + 16;
+    line-height: @line-height--h1 + 20;
+  }
+}
+
+.promo__blocks {
+  @media @tablet {
+    display: flex;
+    .container();
+  }
 }
 
 .promo__block {
-  padding-top: 25px;
-  padding-bottom: 25px;
-
   background: @main-color;
 
   font-size: @font-size + 4;
@@ -28,19 +95,61 @@
   &--toy {
     background: @main-color--darken;
   }
+
+  @media @tablet {
+    width: 50%;
+  }
 }
 
 .promo__block-btn {
+  position: relative;
+
   display: flex;
+
+  padding-top: 25px;
+  padding-right: 10%;
+  padding-bottom: 25px;
+  padding-left: 10%;
+
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  background: inherit;
+
   align-items: center;
   justify-content: space-between;
 
-  .container();
-
-  text-decoration: none;
-
   & svg {
-    fill: fade(@icon-color, 50%);
+    fill: fade(@icon-color, 30%);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      height: 5px;
+
+      content: "";
+
+      background: inherit;
+    }
+
+    & svg {
+      fill: fade(@icon-color, 50%);
+    }
+  }
+
+  &:active .promo__block-title {
+    color: fade(#fff, 30%);
+  }
+
+  &:active svg {
+    fill: fade(@icon-color, 10%);
   }
 }
 

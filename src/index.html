@@ -19,7 +19,7 @@
       <div class="top-menu__wrapper">
         <div class="logo top-menu__logo">
           <picture>
-            <source media="(min-width:1200px)" srcset="img/mishka-logo-desktop.png, img/mishka-logo-desktop@2x.png 2x">
+            <source media="(min-width:1150px)" srcset="img/mishka-logo-desktop.png, img/mishka-logo-desktop@2x.png 2x">
             <source media="(min-width:768px)" srcset="img/mishka-logo-tablet.png, img/mishka-logo-tablet@2x.png 2x">
             <img src="img/mishka-logo-mobile.png" srcset="img/mishka-logo-mobile@2x.png 2x" alt="Логотип Мишка">
           </picture>
@@ -27,45 +27,49 @@
         <button class="burger top-menu__btn" type="button">
           <span class="burger__layer">переключатель</span>
         </button>
-        <nav class="navigation top-menu__nav  top-menu__nav--nojs">
-          <ul class="navigation__list  top-menu__nav-list">
-            <li class="navigation__item  top-menu__nav-item">
-              <a href="#" class="navigation__link  top-menu__nav-link">Каталог товаров</a>
-            </li>
-            <li class="navigation__item  top-menu__nav-item">
-              <a href="#" class="navigation__link  top-menu__nav-link">Влияние на заказ</a>
-            </li>
-            <li class="navigation__item  top-menu__nav-item">
-              <a href="#" class="navigation__link  top-menu__nav-link">
-                <svg width="20" height="20"><use xlink:href="#search"></use></svg>
-                Поиск по сайту
-              </a>
-            </li>
-            <li class="navigation__item  top-menu__nav-item">
-              <a href="#" class="navigation__link  top-menu__nav-link">
-                <svg width="20" height="20"><use xlink:href="#cart"></use></svg>
-                Корзина: пока пуста
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="navigation  top-menu__nav">
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--catalog">
+            <a href="#" class="navigation__link  top-menu__nav-link">Каталог товаров</a>
+          </li>
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--order">
+            <a href="#" class="navigation__link  top-menu__nav-link">Влияние на заказ</a>
+          </li>
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--search">
+            <a href="#" class="navigation__link  top-menu__nav-link">
+              <svg width="20" height="20"><use xlink:href="#search"></use></svg>
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--cart">
+            <a href="#" class="navigation__link  top-menu__nav-link">
+              <svg width="20" height="20"><use xlink:href="#cart"></use></svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--hidden">
+            <a href="#" class="navigation__link  top-menu__nav-link">Новые поступления</a>
+          </li>
+          <li class="navigation__item  top-menu__nav-item  top-menu__nav-item--hidden">
+            <a href="#" class="navigation__link  top-menu__nav-link">Распродажа</a>
+          </li>
+        </ul>
       </div>
     </div>
     <section class="promo">
-      <div class="promo__wrapper">
-        <h1 class="promo__title">Милые штучки ручной работы для дома</h1>
-      </div>
-      <div class="promo__block  promo__block--interior">
-        <a href="#" class="promo__block-btn">
-          <h2 class="promo__block-title">Предметы интерьера</h2>
-          <svg width="63" height="63"><use xlink:href="#lamp"></use></svg>
-        </a>
-      </div>
-      <div class="promo__block  promo__block--toy">
-        <a href="#" class="promo__block-btn">
-          <h2 class="promo__block-title">Детские игрушки</h2>
-          <svg width="63" height="63"><use xlink:href="#block"></use></svg>
-        </a>
+      <h1 class="promo__title">Милые штучки ручной работы для дома</h1>
+      <div class="promo__blocks">
+        <div class="promo__block  promo__block--interior">
+          <a href="#" class="promo__block-btn">
+            <h2 class="promo__block-title">Предметы интерьера</h2>
+            <svg width="63" height="63"><use xlink:href="#lamp"></use></svg>
+          </a>
+        </div>
+        <div class="promo__block  promo__block--toy">
+          <a href="#" class="promo__block-btn">
+            <h2 class="promo__block-title">Детские игрушки</h2>
+            <svg width="63" height="63"><use xlink:href="#block"></use></svg>
+          </a>
+        </div>
       </div>
     </section>
   </header>
