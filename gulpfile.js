@@ -35,7 +35,8 @@ gulp.task("style", function() {
 });
 
 gulp.task("minjs", function() {
-  gulp.src("build/js/*.js")
+  gulp.src("src/js/*.js")
+    .pipe(gulp.dest("build/js/"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js/minjs"));
 });

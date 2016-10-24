@@ -27,24 +27,24 @@
         <button class="burger menu__btn" type="button">
           <span class="burger__layer">переключатель</span>
         </button>
-        <nav class="nav  menu__nav">
+        <nav class="nav  menu__nav  menu__nav--nojs  menu__nav--closed">
           <ul class="nav__list  nav__list--navigation">
             <li class="nav__item"><a href="#" class="nav__link">Каталог товаров</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Вязание на заказ</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Новые поступления</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Распродажа</a></li>
+            <li class="nav__item  nav__item--hidden"><a href="#" class="nav__link">Новые поступления</a></li>
+            <li class="nav__item  nav__item--hidden"><a href="#" class="nav__link">Распродажа</a></li>
           </ul>
           <ul class="nav__list  nav__list--user">
-            <li class="nav__item">
+            <li class="nav__item  nav__item--search">
               <a href="#" class="nav__link">
                 Поиск по сайту
-                <svg><use xlink:href="#search"></use></svg>
+                <svg width="20" height="20"><use xlink:href="#search"></use></svg>
               </a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item  nav__item--cart">
               <a href="#" class="nav__link">
                 Корзина: пока пуста
-                <svg><use xlink:href="#cart"></use></svg>
+                <svg width="20" height="20"><use xlink:href="#cart"></use></svg>
               </a>
             </li>
           </ul>
