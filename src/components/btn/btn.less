@@ -1,0 +1,29 @@
+.btn {
+  display: block;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: @btn-color;
+  border: 2px solid  @btn-bd;
+
+  font-size: @font-size + 2;
+  font-weight: 700;
+  line-height: @font-size + 2;
+
+  &:hover {
+    background: @btn-bg--hvr;
+    color: @btn-color--hvr;
+  }
+
+  &:active {
+    background: @btn-bg--dwn;
+    color: @btn-color--dwn;
+  }
+}
