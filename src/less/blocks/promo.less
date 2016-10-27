@@ -28,7 +28,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 23px;
+      height: 20px;
       background: url("../img/zigzag-fill-desktop.png") repeat-x;
       background-size: 1150px 34px;
 
@@ -40,9 +40,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 23px;
+        height: 20px;
         background: url("../img/zigzag-fill-desktop@2x.png") repeat-x;
-        background-size: 1150px 34px;
+        background-size: 1150% 34px;
       }
     }
   }
@@ -77,6 +77,12 @@
 
     font-size: @font-size--h1 + 16;
     line-height: @line-height--h1 + 20;
+  }
+
+  @media @desktop {
+    font-size: @font-size--h2 + 28;
+    line-height: @line-height--h2 + 27;
+    width: 75%;
   }
 }
 

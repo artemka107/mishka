@@ -1,0 +1,26 @@
+.social {
+  width: 140px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media @tablet {
+    padding: 0;
+  }
+}
+
+.social__link {
+  font-size: 0;
+  line-height: 0;
+
+  &:hover svg {
+    fill: @icon-color--hvr;
+  }
+
+  &:active svg {
+    fill: @icon-color--dwn
+  }
+}
